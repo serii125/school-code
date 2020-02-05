@@ -7,7 +7,100 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <style>
-        
+        body {
+            font-size: 16px;
+            padding: 0px;
+            margin: 0px;
+        }
+        .short-info {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "name photo"
+                "about links";
+            overflow: hidden;
+            height: 100vh;
+            background: #000000;
+            margin: 0px;
+        }
+        .photo-block {
+            display: flex;
+            grid-area: photo;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 16px;
+            background: #174eb455;
+        }
+        .photo-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url(https://photopict.ru/wp-content/uploads/2019/05/kartinki-na-avu-v-vatsap3.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .name-block {
+            position: relative;
+            grid-area: name;
+            display: flex;
+            align-items: flex-end;
+            padding: 16px;
+            font-size: 250%;
+            background: #215bb355;
+            color: #ffffff;
+        }
+        .about-me-block {
+            position: relative;
+            grid-area: about;
+            display: flex;
+            align-items: flex-start;
+            padding: 16px;
+            font-size: 120%;
+            background: #3664bb55;
+            color: #eeeeee;
+        }
+        .links-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            grid-area: links;
+            padding: 16px;
+            background: #197ca355;
+        }
+        .links-block>a {
+            display: inline-block;
+            height: 64px;
+            width: 64px;
+            margin: 16px;
+        }
+        .links-block>a.link-vk {
+            background: url(https://brand.vkforms.ru/static/media/logo_color_198.231228dd.svg) no-repeat 50% / contain;
+        }
+        .links-block>a.link-facebook {
+            background: url(https://en.facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png) no-repeat 50% / contain;
+        }
+        .links-block>a.link-instagram {
+            background: url(https://instagram-brand.com/wp-content/uploads/2016/11/Instagram_AppIcon_Aug2017.png?w=64) no-repeat 50% / contain;
+        }
+        .links-block>a.link-twitter {
+            background: url(https://cdn3.iconfinder.com/data/icons/capsocial-round/500/twitter-64.png) no-repeat 50% / contain;
+            color: #ffffff;
+        }
+
+        .long-info {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0px;
+            background: yellow;
+            color: #214594;
+        }
     </style>
 </head>
 <body>
@@ -15,7 +108,7 @@
         <div class="photo-block">
             <div class="photo-image"></div>
         </div>
-        <div class="name-block">}{от@быч</div>
+        <div class="name-block">cool</div>
         <div class="about-me-block">Я джин ...</div>
         <div class="links-block">
             <a href="#page1" class="link-vk"></a>
@@ -23,9 +116,6 @@
             <a href="#page3" class="link-instagram"></a>
             <a href="#page4" class="link-twitter"></a>
         </div>
-    </div>
-    <div id="page2" class="long-info">
-        <h3>Здесь будет более детальная информация</h3>
     </div>
     
 </body>
